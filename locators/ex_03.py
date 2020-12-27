@@ -14,5 +14,6 @@ ex_03 = {
 
 expected_result = {
     "good_answer_text": "OK. Good answer",
+    "trial_text": "s13:v5",
 }
 

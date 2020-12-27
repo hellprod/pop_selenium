@@ -31,9 +31,18 @@ class MyEx03Test(unittest.TestCase):
         self.driver.quit()
         print('\nend class tests')
 
-    def test_ex02(self):
+    def trial_set_to_ex3(self):
         self.main_ex_03.dropdown_click()
         self.main_ex_03.dropdown_pink_pong()
+
+    def test_trail_set_to_ex3(self):
+        self.trial_set_to_ex3()
+
+        trial_text = self.main_ex_03.trial_text()
+        self.assertEqual(trial_text, expected_result["trial_text"])
+
+    def test_ex03(self):
+        self.trial_set_to_ex3()
 
         self.main_ex_03.solution_click()
 
