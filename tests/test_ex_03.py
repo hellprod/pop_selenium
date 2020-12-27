@@ -20,6 +20,7 @@ class MyEx03Test(unittest.TestCase):
 
     @classmethod
     def setUp(self) -> None:
+        self.driver.refresh()
         print('\nstart test')
 
     @classmethod

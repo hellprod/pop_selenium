@@ -20,6 +20,7 @@ class MyEx02Test(unittest.TestCase):
 
     @classmethod
     def setUp(self) -> None:
+        self.driver.refresh()
         print('\nstart test')
 
     @classmethod
@@ -31,10 +32,19 @@ class MyEx02Test(unittest.TestCase):
         self.driver.quit()
         print('\nend class tests')
 
-    def test_ex02(self):
+    def trial_set_to_ex2(self):
         self.main_ex_02.input_t14_clear()
         self.main_ex_02.input_t14()
         self.main_ex_02.button1_click()
+
+    def test_trail_set_to_ex2(self):
+        self.trial_set_to_ex2()
+
+        trial_text = self.main_ex_02.trial_text()
+        self.assertEqual(trial_text, expected_result["trial_text"])
+
+    def test_ex02(self):
+        self.trial_set_to_ex2()
 
         self.main_ex_02.solution_click()
 

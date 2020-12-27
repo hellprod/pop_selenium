@@ -14,8 +14,10 @@ ex_02 = {
 
 expected_result = {
     "good_answer_text": "OK. Good answer",
+    "trial_text": "t14:Manage effect.b1",
 }
 
 enter_your_text = {
     "T14": "Manage effect.",
+
 }
