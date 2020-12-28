@@ -1,0 +1,1038 @@
+{
+	"info": {
+		"_postman_id": "332c73b1-d199-4ee9-8ed8-c284d1dc1358",
+		"name": "certificate-controller",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Wyświetl wszystkie certyfikaty 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "qw",
+						"value": "2",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/rest/v1/certificates/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"rest",
+						"v1",
+						"certificates",
+						"all"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "3",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wyświetl wszystkie certyfikaty 500",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 500\", function () {",
+							"    pm.response.to.have.status(500);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "qw",
+						"value": "2",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/rest/v1/certificates/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"rest",
+						"v1",
+						"certificates",
+						"all"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "3",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wyświetl certyfikat wg id (Query Params) 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "qw",
+						"value": "2",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/rest/v1/certificate?id=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"rest",
+						"v1",
+						"certificate"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "id",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "333",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wyświetl certyfikat wg id (Query Params) 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "qw",
+						"type": "text",
+						"value": "2",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/rest/v1/certificate?id=333",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"rest",
+						"v1",
+						"certificate"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "333"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wyświetl certyfikat wg id (Query Params) 500",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 500\", function () {",
+							"    pm.response.to.have.status(500);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "qw",
+						"value": "2",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/rest/v1/certificate?id=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"rest",
+						"v1",
+						"certificate"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "id",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "333",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wyświetl certyfikat wg id (Path Params) 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "qw",
+						"type": "text",
+						"value": "2",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/rest/v1/certificate/{{id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"rest",
+						"v1",
+						"certificate",
+						"{{id}}"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wyświetl certyfikat wg id (Path Params) 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "qw",
+						"type": "text",
+						"value": "2",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/rest/v1/certificate/{{500_id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"rest",
+						"v1",
+						"certificate",
+						"{{500_id}}"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wyświetl certyfikat wg id (Path Params) 500",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 500\", function () {",
+							"    pm.response.to.have.status(500);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "qw",
+						"type": "text",
+						"value": "2",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/rest/v1/certificate/{{id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"rest",
+						"v1",
+						"certificate",
+						"{{id}}"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dodaj certyfikat 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"\tpm.expect(pm.response.code).to.be.oneOf([200,201,202]);",
+							"});",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"pm.environment.set(\"id_add\", jsonData.id);",
+							"",
+							"pm.test(\"prwawdzenie popranie dodanych danych\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.organization).to.eql('QA');",
+							"    pm.expect(jsonData.name).to.eql('hellprod');",
+							"    pm.expect(jsonData.period).to.eql('Brak danych');",
+							"    pm.expect(jsonData.trade).to.eql('IT QA');",
+							"",
+							"});",
+							"",
+							"",
+							"console.log(jsonData)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"type": "text",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"hellprod\",\n  \"organization\": \"QA\",\n  \"period\": \"Brak danych\",\n  \"trade\": \"IT QA\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/rest/v1/certificate",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"rest",
+						"v1",
+						"certificate"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wyświetl certyfikat dla dodanego id 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "qw",
+						"type": "text",
+						"value": "2",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/rest/v1/certificate?id={{id_add}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"rest",
+						"v1",
+						"certificate"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "{{id_add}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zmień certyfikat id 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"prwawdzenie popranie dodanych danych\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.organization).to.eql('WSB');",
+							"    pm.expect(jsonData.name).to.eql('2018wsbTest');",
+							"    pm.expect(jsonData.period).to.eql('bezterminowo');",
+							"    pm.expect(jsonData.trade).to.eql('IT');",
+							"",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "",
+						"type": "text",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"2018wsbTest\",\n  \"organization\": \"WSB\",\n  \"period\": \"bezterminowo\",\n  \"trade\": \"IT\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/rest/v1/certificate/{{id_add}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"rest",
+						"v1",
+						"certificate",
+						"{{id_add}}"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "{{id_add}}",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zmień certyfikat id 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "",
+						"type": "text",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"HELLPROD\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/rest/v1/certificate/{{500_id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"rest",
+						"v1",
+						"certificate",
+						"{{500_id}}"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "{{id_add}}",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuń certyfikat id 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "",
+						"type": "text",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/rest/v1/certificate/{{id_add}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"rest",
+						"v1",
+						"certificate",
+						"{{id_add}}"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuń certyfikat id 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "",
+						"type": "text",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/rest/v1/certificate/{{id_add}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"rest",
+						"v1",
+						"certificate",
+						"{{id_add}}"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wyświetl wszystkie certyfikaty 200 Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log(jsonData)",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "qw",
+						"value": "2",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/rest/v1/certificates/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"rest",
+						"v1",
+						"certificates",
+						"all"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "3",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
