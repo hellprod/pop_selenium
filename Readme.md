@@ -1,4 +1,4 @@
-#ćwiczenia 1,2,3 oraz 4
+# ćwiczenia 1,2,3 oraz 4
 ## wymagania:
 - python 3.6
 - pip 
