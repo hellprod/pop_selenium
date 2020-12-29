@@ -18,10 +18,10 @@
     - $ cd common/connfig.py
         - chrome_path = "/usr/bin/chromedriver"
     
-##uruchomienie testów
+## uruchomienie testów
   - $ cd tests
   - $ . all_ex.bat 
 
-#uruchomienie testowego API
+# uruchomienie testowego API
 - instrukcja w katalogu API
 
