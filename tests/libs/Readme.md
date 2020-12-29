@@ -1,1 +1,3 @@
-add and unpack the current allure
+- tests/libs  
+  - pobrać allure http://allure.qatools.ru/
+  - rozpakować allure-2.13.8.zip
