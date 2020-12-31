@@ -49,8 +49,8 @@ class MyEx01Test(unittest.TestCase):
 
         self.main_ex_01.solution_click()
 
-        trial_text = self.main_ex_01.good_answer_text()
-        self.assertEqual(expected_result["good_answer_text"], trial_text)
+        answer_text = self.main_ex_01.good_answer_text()
+        self.assertEqual(expected_result["good_answer_text"], answer_text)
 
 
 if __name__ == '__main__':
