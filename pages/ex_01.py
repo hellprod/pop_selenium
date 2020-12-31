@@ -1,4 +1,4 @@
-# /exercises/exercise1?seed=0b829d8d-8223-46c7-8e56-68a0b451331b
+# /exercises/exercise1
 import time
 from selenium.webdriver.support import expected_conditions as EC
 
