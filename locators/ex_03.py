@@ -10,10 +10,12 @@ ex_03 = {
 
     "trial": (By.XPATH, "//pre[@id='trail']"),
     "good_answer": (By.XPATH, "//code[contains(text(),'OK. Good answer')]"),
+    "h1_exercise": (By.XPATH, "//h1[contains(text(),'Exercise 3 - Dropdown list')]")
 }
 
 expected_result = {
     "good_answer_text": "OK. Good answer",
     "trial_text": "s13:v5",
+    "h1_text": "Exercise 3 - Dropdown list"
 }
 

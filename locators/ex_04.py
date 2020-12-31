@@ -17,10 +17,12 @@ ex_04 = {
 
     "trial": (By.XPATH, "//pre[@id='trail']"),
     "good_answer": (By.XPATH, "//code[contains(text(),'OK. Good answer')]"),
+    "h1_exercise": (By.XPATH, "//h1[contains(text(),'Exercise 4 - Radio buttons')]"),
 }
 
 expected_result = {
     "good_answer_text": "OK. Good answer",
     "trial_text": "[5, 8, 5, 2]",
+    "h1_text": "Exercise 4 - Radio buttons"
 }
 

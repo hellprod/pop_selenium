@@ -5,7 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
 from locators.ex_02 import ex_02 as selectors
-from locators.ex_02 import enter_your_text as you_text
+from locators.ex_02 import enter_your_text as your_text
 
 
 class Ex02Page:
@@ -21,9 +21,9 @@ class Ex02Page:
 		print(f"input_t14_clean() - OK: ")
 
 	def input_t14(self):
-		WebDriverWait(self.driver, 30).until(EC.presence_of_element_located(self.selectors["input_t14"])).send_keys(you_text["T14"])
+		WebDriverWait(self.driver, 30).until(EC.presence_of_element_located(self.selectors["input_t14"])).send_keys(your_text["T14"])
 		time.sleep(self.waiting_time)
-		print(f"input_t14({you_text['T14']}) - OK: ")
+		print(f"input_t14({your_text['T14']}) - OK: ")
 
 	def button1_click(self):
 		WebDriverWait(self.driver, 30).until(EC.presence_of_element_located(self.selectors["button1"])).click()
@@ -48,3 +48,11 @@ class Ex02Page:
 		answer_text = answer.text
 		print(f"trial_text({answer_text}) - OK: ")
 		return answer_text
+
+	def h1_exercise(self):
+		answer = WebDriverWait(self.driver, 30).until(EC.presence_of_element_located(self.selectors["h1_exercise"]))
+		time.sleep(self.waiting_time)
+		answer_text = answer.text
+		print(f"h1_exercise({answer_text}) - OK: ")
+		return answer_text
+

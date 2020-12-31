@@ -42,3 +42,11 @@ class Ex03Page:
 		answer_text = answer.text
 		print(f"trial_text({answer_text}) - OK: ")
 		return answer_text
+
+	def h1_exercise(self):
+		answer = WebDriverWait(self.driver, 30).until(EC.presence_of_element_located(self.selectors["h1_exercise"]))
+		time.sleep(self.waiting_time)
+		answer_text = answer.text
+		print(f"h1_exercise({answer_text}) - OK: ")
+		return answer_text
+
