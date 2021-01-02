@@ -41,7 +41,7 @@ class MyEx01Test(unittest.TestCase):
 
     def test_ex01(self):
         text = self.trial_set_to_ex1()
-        # todo
+
         for i in text.split('b'):
             if i == '1':
                 self.main_ex_01.button1_click()
