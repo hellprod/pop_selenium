@@ -57,22 +57,5 @@ class MyEx04Test(unittest.TestCase):
         self.assertEqual(expected_result["good_answer_text"], assert_text)
 
 
-    # def test_trail_set_to_ex4(self):
-    #     self.trial_set_to_ex4()
-    #
-    #     trial_text = self.main_ex_04.trial_text()
-    #     self.assertEqual(trial_text, expected_result["trial_text"])
-    #
-    # def test_ex04(self):
-    #     self.trial_set_to_ex4()
-    #
-    #     self.driver.execute_script("window.scrollTo(0,1200)")
-    #     self.main_ex_04.solution_click()
-    #
-    #     # assert_text = self.main_ex_03.good_answer_text()
-    #     trial_text = self.main_ex_04.trial_text()
-    #     self.assertEqual(trial_text, expected_result["good_answer_text"])
-
-
 if __name__ == '__main__':
     unittest.main()
