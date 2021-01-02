@@ -45,6 +45,7 @@ class MyEx03Test(unittest.TestCase):
         self.main_ex_03.dropdown_click()
         self.main_ex_03.dropdown_choose(choose)
 
+        self.main_ex_03.trial_text()
         self.main_ex_03.solution_click()
 
         trial_text = self.main_ex_03.good_answer_text()

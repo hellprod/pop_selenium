@@ -46,6 +46,7 @@ class MyEx02Test(unittest.TestCase):
         self.main_ex_02.input_t14(t14_text)
         self.main_ex_02.button1_click()
 
+        self.main_ex_02.trial_text()
         self.main_ex_02.solution_click()
 
         answer_text = self.main_ex_02.good_answer_text()
