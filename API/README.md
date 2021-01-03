@@ -5,4 +5,5 @@ https://drive.google.com/file/d/1vsqiAv9fufoa7niZrycpJ3k_HbIGexd7/view?usp=shari
 - po wubraniu dodanego środowiska uruchomienie kolekcji
 
 
-- import
+- $ cd API/TestCases/
+- $ python -m pytest test_certificate.py 
