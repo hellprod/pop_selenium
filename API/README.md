@@ -3,3 +3,7 @@ https://drive.google.com/file/d/1vsqiAv9fufoa7niZrycpJ3k_HbIGexd7/view?usp=shari
 - uruchomienie testowego API (wymagana java 8 jre) java -jar api.jar
 - utruchomienie Postman dodanie kolekcji oraz środowiska z katalogu API
 - po wubraniu dodanego środowiska uruchomienie kolekcji
+
+
+- $ cd API/TestCases/
+- $ python -m pytest test_certificate.py 

@@ -2,6 +2,7 @@ import unittest
 from selenium import webdriver
 
 from common.connfig import *
+from pages.ex_00 import Ex00Page
 from pages.ex_01 import Ex01Page
 from locators.ex_01 import expected_result
 
@@ -14,8 +15,9 @@ class MyEx01Test(unittest.TestCase):
         for argument in chrome_options:
             options.add_argument(argument)
         self.driver = webdriver.Chrome(options=options, executable_path=chrome_path)
-        self.url = url_base + url_ex_01
+        self.url = url_base
         self.driver.get(self.url)
+        self.main_ex_00 = Ex00Page(self.driver)
         self.main_ex_01 = Ex01Page(self.driver)
 
     @classmethod
@@ -33,26 +35,24 @@ class MyEx01Test(unittest.TestCase):
         print('\nend class tests')
 
     def trial_set_to_ex1(self):
-        self.main_ex_01.button2_click()
-        self.main_ex_01.button1_click()
-        self.main_ex_01.button2_click()
-
-    def test_trail_set_to_ex1(self):
-        self.trial_set_to_ex1()
-
-        trial_text = self.main_ex_01.trial_text()
-        self.assertEqual(trial_text, expected_result["trial_text"])
-
+        self.main_ex_00.exercise_1_click()
+        trial_text = self.main_ex_01.trial_set_to()
+        return trial_text
 
     def test_ex01(self):
-        self.trial_set_to_ex1()
+        text = self.trial_set_to_ex1()
 
+        for i in text.split('b'):
+            if i == '1':
+                self.main_ex_01.button1_click()
+            elif i == "2":
+                self.main_ex_01.button2_click()
+
+        self.main_ex_01.trial_text()
         self.main_ex_01.solution_click()
 
-        # assert_text = self.main_ex_01.good_answer_text()
-        trial_text = self.main_ex_01.trial_text()
-        self.assertEqual(trial_text, expected_result["good_answer_text"])
-
+        answer_text = self.main_ex_01.good_answer_text()
+        self.assertEqual(expected_result["good_answer_text"], answer_text)
 
 
 if __name__ == '__main__':

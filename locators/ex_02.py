@@ -7,14 +7,15 @@ ex_02 = {
     "input_t14": (By.XPATH, "//input[@id='t14']"),
 
     "solution": (By.XPATH, "//button[@id='solution']"),
-
+    "trial_set_to": (By.XPATH, "//*[contains(text(),'Trail set to')]"),
     "trial": (By.XPATH, "//pre[@id='trail']"),
     "good_answer": (By.XPATH, "//code[contains(text(),'OK. Good answer')]"),
+    "h1_exercise": (By.XPATH, "//h1[contains(text(),'Exercise 2 - Editbox')]"),
 }
 
 expected_result = {
     "good_answer_text": "OK. Good answer",
-    "trial_text": "t14:Manage effect.b1",
+    "h1_text": "Exercise 2 - Editbox"
 }
 
 enter_your_text = {
