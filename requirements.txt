@@ -14,7 +14,7 @@ iniconfig==1.1.1
 ipython==7.16.1
 ipython-genutils==0.2.0
 jedi==0.18.0
-Jinja2==2.11.2
+Jinja2==2.11.3
 jsonp2json==1.0
 jsonparser==1.0
 jsonpath==0.82
